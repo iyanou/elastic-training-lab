@@ -1,0 +1,54 @@
+PUT _index_template/filebeat-8.13.0
+{
+  "index_patterns": ["filebeat-8.13.0"],  
+  "data_stream": {},
+  "template": {
+    "settings": {
+      "index.lifecycle.name": "filebeat",
+      "analysis": {
+        "analyzer": {
+          "filebeat_analyzer": {
+            "type": "custom",
+            "tokenizer": "standard",
+            "filter": ["lowercase", "synonym"]
+          }
+        },
+        "filter": {
+          "synonym": {
+            "type": "synonym",
+            "synonyms": ["failed, error"]
+          }
+        }
+      }
+    },
+    "mappings": {
+      "properties": {
+        "logger": {
+          "type": "keyword"
+        },
+        "thread_id": {
+          "type": "keyword"
+        },
+        "user_id": {
+          "type": "keyword"
+        },
+        "request_id": {
+          "type": "keyword"
+        },
+        "@timestamp": {
+          "type": "date"
+        },
+        "event_date": {
+          "type": "date"
+        },
+        "message": {
+          "type": "text",
+          "analyzer": "filebeat_analyzer"
+        },
+        "level": {
+          "type": "keyword"
+        }
+      }
+    }
+  }
+}

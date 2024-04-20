@@ -3,7 +3,7 @@ server.host: 192.168.50.107
 server.name: "kibana"
 elasticsearch.hosts: ["https://192.168.50.104:9201","https://192.168.50.105:9202","https://192.168.50.106:9203"]
 elasticsearch.username: "kibana_system"
-elasticsearch.password: "r96iG-s8bU=JlI3ALWnM"
+elasticsearch.password: "G_pg5zfIiCfPPaRgZ5*h"
 
 #ES SSL
 elasticsearch.ssl.certificateAuthorities: [ "/opt/training/ca/ca.crt" ]

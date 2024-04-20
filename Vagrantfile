@@ -8,7 +8,7 @@ Vagrant.configure(2) do |config|
     { :hostname => "HOST01", :ip => "192.168.50.104", :cpus => 2, :mem => 2048},
     { :hostname => "HOST02", :ip => "192.168.50.105", :cpus => 2, :mem => 2048},
     { :hostname => "HOST03", :ip => "192.168.50.106", :cpus => 2, :mem => 2048},
-    { :hostname => "HOST04", :ip => "192.168.50.107", :cpus => 4, :mem => 4096}
+    { :hostname => "HOST04", :ip => "192.168.50.107", :cpus => 6, :mem => 6144}
   ]
   
   # Define /etc/hosts for all servers
@@ -20,6 +20,8 @@ Vagrant.configure(2) do |config|
     config.vm.define node[:hostname] do |cfg|
       cfg.vm.hostname = node[:hostname]
       cfg.vm.network "private_network", ip: node[:ip]
+
+      cfg.ssh.forward_agent = true
 
       cfg.vm.provider "virtualbox" do |v|
         v.customize [ "modifyvm", :id, "--cpus", node[:cpus] ]
