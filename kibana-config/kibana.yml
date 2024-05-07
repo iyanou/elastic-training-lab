@@ -1,0 +1,18 @@
+server.port: 5601
+server.host: 192.168.50.107
+server.name: "kibana"
+elasticsearch.hosts: ["https://192.168.50.104:9201","https://192.168.50.105:9202","https://192.168.50.106:9203"]
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "G_pg5zfIiCfPPaRgZ5*h"
+
+#ES SSL
+elasticsearch.ssl.certificateAuthorities: [ "/opt/training/ca/ca.crt" ]
+elasticsearch.ssl.verificationMode: certificate
+
+#https://www.elastic.co/guide/en/kibana/current/security-settings-kb.html
+# bin/kibana-encryption-keys generate
+xpack.encryptedSavedObjects.encryptionKey: 14b5b9d8505d3d9824357a36a1cf3540
+xpack.reporting.encryptionKey: 2dca9bc464040916f9fc4290967ded8a
+xpack.security.encryptionKey: 8f7ebcece600fe922fe56e71c976f040
+
+    
