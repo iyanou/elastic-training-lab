@@ -4,7 +4,6 @@ PUT _index_template/filebeat-8.13.0
   "data_stream": {},
   "template": {
     "settings": {
-      "index.lifecycle.name": "filebeat",
       "analysis": {
         "analyzer": {
           "filebeat_analyzer": {
