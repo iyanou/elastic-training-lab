@@ -1,4 +1,4 @@
-Dans ce TP, nous allons déployer 4 machines virtuelles en utilisant Vagrant. 
+Dans ce TP, nous allons déployer 4 machines virtuelles en utilisant Vagrant. Suivez les instrucstions dans le document TP - Monitoring des Logs Spring Boot avec ELK.pdf pour une bonne realisation de ce TP.
 
 ![image](https://github.com/user-attachments/assets/079d5532-46e9-4739-bede-99dc5081b278)
 
