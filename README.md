@@ -1,4 +1,4 @@
-Dans ce TP, nous allons déployer 4 machines virtuelles en utilisant Vagrant. Suivez les instrucstions dans le document https://github.com/iyanou/elastic-training-lab/blob/main/TP%20-%20Monitoring%20des%20Logs%20Spring%20Boot%20avec%20ELK.pdf TP - Monitoring des Logs Spring Boot avec ELK.pdf pour une bonne realisation de ce TP.
+Dans ce TP, nous allons déployer 4 machines virtuelles en utilisant Vagrant. Suivez les instrucstions dans le document https://github.com/iyanou/elastic-training-lab/blob/main/TP%20-%20Monitoring%20des%20Logs%20Spring%20Boot%20avec%20ELK.pdf pour une bonne realisation de ce TP.
 
 ![image](https://github.com/user-attachments/assets/079d5532-46e9-4739-bede-99dc5081b278)
 
