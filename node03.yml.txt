@@ -1,0 +1,22 @@
+#elasticsearch.yml
+cluster.name: es-training
+node.name: node03
+network.host: 192.168.50.106
+http.port: 9203
+transport.port: 9303
+discovery.seed_hosts: ["192.168.50.104:9301", "192.168.50.105:9302", "192.168.50.106:9303"]
+cluster.initial_master_nodes: ["node01", "node02", "node03"]
+#Enable SECURITY
+xpack.security.enabled: true
+xpack.security.authc.api_key.enabled: true
+#Secure HTTP
+xpack.security.http.ssl.enabled: true
+xpack.security.http.ssl.key: certificates/node03/node03.key
+xpack.security.http.ssl.certificate: certificates/node03/node03.crt
+xpack.security.http.ssl.certificate_authorities: certificates/ca/ca.crt
+#Secure TRANSPORT
+xpack.security.transport.ssl.enabled: true
+xpack.security.transport.ssl.key: certificates/node03/node03.key
+xpack.security.transport.ssl.certificate: certificates/node03/node03.crt
+xpack.security.transport.ssl.certificate_authorities: certificates/ca/ca.crt
+xpack.security.transport.ssl.verification_mode: certificate

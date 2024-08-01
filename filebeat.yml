@@ -26,7 +26,7 @@ filebeat.config.modules:
 output.logstash:
   # The Logstash hosts
   enabled: true
-  hosts: ["172.20.0.5:5044"]
+  hosts: ["192.168.50.107:5044"]
 
 # ================================= Processors =================================
 processors:

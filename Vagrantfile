@@ -5,10 +5,10 @@ Vagrant.configure(2) do |config|
   config.vm.boot_timeout = 6000
 
   NODES = [
-    { :hostname => "HOST01", :ip => "192.168.50.104", :cpus => 8, :mem => 16384}
-    #{ :hostname => "HOST02", :ip => "192.168.50.105", :cpus => 4, :mem => 4000},
-    #{ :hostname => "HOST03", :ip => "192.168.50.106", :cpus => 4, :mem => 4000},
-    #{ :hostname => "HOST04", :ip => "192.168.50.107", :cpus => 8, :mem => 8000}
+    { :hostname => "HOST01", :ip => "192.168.50.104", :cpus => 4, :mem => 4096},
+    { :hostname => "HOST02", :ip => "192.168.50.105", :cpus => 4, :mem => 4096},
+    { :hostname => "HOST03", :ip => "192.168.50.106", :cpus => 4, :mem => 4096},
+    { :hostname => "HOST04", :ip => "192.168.50.107", :cpus => 8, :mem => 12288}
   ]
   
   # Define /etc/hosts for all servers

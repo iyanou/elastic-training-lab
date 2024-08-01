@@ -1,0 +1,19 @@
+#kibana.yml
+server.port: 5601
+server.host: 192.168.50.107
+server.name: "kibana"
+elasticsearch.hosts: ["https://192.168.50.104:9201", "https://192.168.50.105:9202", "https://192.168.50.106:9203"]
+elasticsearch.username: "kibana_system"
+elasticsearch.password: "$kibana_system_password"
+#HTTP SSL
+server.ssl.enabled: true
+server.ssl.certificate: /opt/training/certificates/kibana/kibana.crt
+server.ssl.key: /opt/training/certificates/kibana/kibana.key
+server.ssl.certificateAuthorities: [ "/opt/training/certificates/ca/ca.crt" ]
+#ES SSL
+elasticsearch.ssl.certificateAuthorities: [ "/opt/training/certificates/ca/ca.crt" ]
+elasticsearch.ssl.verificationMode: certificate
+# bin/kibana-encryption-keys generate
+xpack.encryptedSavedObjects.encryptionKey: 6f47131be984e3df38fc6e0c25b6865c
+xpack.reporting.encryptionKey: 8046f6baea96389a900879c3081a9837
+xpack.security.encryptionKey: 6c0074cd1a970076a1e9959881a709a9

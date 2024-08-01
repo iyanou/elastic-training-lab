@@ -1,7 +1,0 @@
-sudo bin/elasticsearch-certutil ca --silent --pem -out config/certificates/ca.zip
-sudo apt install unzip
-sudo unzip -o config/certificates/ca.zip -d config/certificates
-sudo bin/elasticsearch-certutil cert --silent --pem -out config/certificates/bundle.zip --in config/certificates/instances.yml --ca-cert config/certificates/ca/ca.crt --ca-key config/certificates/ca/ca.key
-sudo unzip -o config/certificates/bundle.zip -d config/certificates
-sudo rm config/certificates/bundle.zip
-sudo rm config/certificates/ca.zip
